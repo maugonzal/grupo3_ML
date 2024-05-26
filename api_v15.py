@@ -8,7 +8,7 @@ from flask_restx import Api, Resource, fields
 from flask_cors import CORS
 
 def predict_proba(url):
-    reg = joblib.load(os.path.dirname(__file__) + '/model.pkl')
+    reg = joblib.load(os.path.dirname(__file__) + '/model_xgb.pkl')
 
     module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
     embed = hub.load(module_url)
